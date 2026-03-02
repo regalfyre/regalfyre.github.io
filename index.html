@@ -1,15 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-  </head>
-  <body>
-    <main>
-        <h1>Welcome to My Website</h1>  
-        <p>This is my new website which is hosted on GitHub Pages!</p>
-    </main>
-  </body>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Amexicas</title>
+  <style>
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      background:linear-gradient(135deg,#0f0f0f,#1b1b1b);
+      color:#fff;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      padding:24px;
+    }
+    .container{
+      width:100%;
+      max-width:520px;
+      padding:46px;
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(18px);
+      border-radius:18px;
+      box-shadow:0 30px 60px rgba(0,0,0,0.6);
+    }
+    h1{margin:0 0 12px 0;font-weight:600;letter-spacing:0.5px;}
+    .subtitle{margin-bottom:28px;opacity:0.65;font-size:14px;line-height:1.4;}
+    input,textarea{
+      width:100%;
+      padding:14px;
+      margin-bottom:16px;
+      border:none;
+      border-radius:10px;
+      background:rgba(255,255,255,0.08);
+      color:#fff;
+      font-size:15px;
+      outline:none;
+      transition:0.2s ease;
+    }
+    input:focus,textarea:focus{background:rgba(255,255,255,0.14);}
+    textarea{min-height:140px;resize:vertical;}
+    button{
+      width:100%;
+      padding:14px;
+      border:none;
+      border-radius:10px;
+      font-size:15px;
+      font-weight:600;
+      letter-spacing:1px;
+      cursor:pointer;
+      background:linear-gradient(135deg,#ffffff,#d6d6d6);
+      color:#000;
+      transition:0.2s ease;
+    }
+    button:hover{transform:translateY(-1px);box-shadow:0 15px 30px rgba(255,255,255,0.12);}
+    .note{margin-top:18px;font-size:12px;opacity:0.45;text-align:center;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Reach Out</h1>
+    <div class="subtitle">Thoughts, collaborations, questions — send it through.</div>
+
+    <form action="https://formsubmit.co/contact@amexicas.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="New message from Amexicas Contact">
+      <input type="hidden" name="_template" value="table">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+
+      <button type="submit">SEND</button>
+    </form>
+
+    <div class="note">Delivered via secure form.</div>
+  </div>
+</body>
 </html>
